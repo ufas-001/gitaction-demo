@@ -27,9 +27,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v3.11.1
+        with:
+          title: 'Automated PR'
+          branch: 'develop'
+          body: 'This is an automated pull request'
       - name: Setup node
         uses: actions/setup-node@v3
-      - name: Install
+      - name: echo hello world
         run: |
           echo "Hello World"
