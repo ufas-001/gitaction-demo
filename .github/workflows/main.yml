@@ -28,11 +28,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Create PR
-        uses: peter-evans/create-pull-request@v3.11.1
+        uses: peter-evans/create-pull-request@v3
         with:
           title: 'Automated PR'
           branch: 'develop'
           body: 'This is an automated pull request'
+          commit-message: "Automte pull request"
       - name: Setup node
         uses: actions/setup-node@v3
       - name: echo hello world
