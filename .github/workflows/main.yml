@@ -38,4 +38,4 @@ jobs:
         uses: actions/setup-node@v3
       - name: echo hello world
         run: |
-          echo "Hello World"
+          echo "Hello World and it works"
